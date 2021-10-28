@@ -19,11 +19,15 @@ const ProductsDetails = () => {
     return <div> 404 .Page Not Found. </div>;
   }
   return (
-    <Layout title={product.name} description={product.description}>
+    <Layout
+      title={product.name}
+      description={product.description}
+      addproperty="h-screen"
+    >
       <div className="mb-36">
         <div className="px-72 mt-16">
           <Link href="/" passHref>
-            <a className="text-indigo-500 hover:text-indigo-800 hover:underline">
+            <a className="text-yellow-500 hover:text-yellow-600 hover:underline">
               Back to Products
             </a>
           </Link>
@@ -43,8 +47,11 @@ const ProductsDetails = () => {
             <div>
               <div className=" px-4 py-4 ml-8 tracking-wider">
                 <ul>
+                  <li className="mb-8 font-semibold text-4xl">
+                    <h1>{product.name}</h1>
+                  </li>
                   <li className="mb-2 text-lg font-semibold">
-                    <h1>Category: {product.category}</h1>
+                    Category: {product.category}
                   </li>
                   <li className="mb-2 text-lg font-semibold">
                     Brand: {product.brand}
@@ -82,7 +89,19 @@ const ProductsDetails = () => {
                   </div>
                 </div>
                 <div className="m-auto py-2 px-2">
-                  <Button fullWidth variant="contained" color="primary">Add to Cart</Button>
+                  <Button
+                    style={{
+                      borderRadius: 35,
+                      backgroundColor: "goldenrod",
+                      padding: "6px 18px",
+                      fontSize: "18px",
+                    }}
+                    fullWidth
+                    variant="contained"
+                    color="primary"
+                  >
+                    Add to Cart
+                  </Button>
                 </div>
               </div>
             </div>

@@ -33,7 +33,11 @@ const Products = () => {
                                 </Link>
                                 <CardActions><div className="flex px-2 space-x-4">
                                     <div>{product.price}</div>
-                                    <Button size="small" color="primary">Add to Cart</Button>
+                                    <Button size="small"
+                                    style={{
+                                        color:"goldenrod",
+                                        borderColor: "goldenrod",
+                                    }} color="primary">Add to Cart</Button>
                                     </div>
                                 </CardActions>
                             </Card>
@@ -45,4 +49,4 @@ const Products = () => {
     )
 }
 
-export default Products
+export default Products;
